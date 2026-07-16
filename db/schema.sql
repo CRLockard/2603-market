@@ -24,5 +24,5 @@ CREATE TABLE orders_products(
     order_id INTEGER NOT NULL REFERENCES orders(id) ON DELETE CASCADE,
     product_id INTEGER NOT NULL REFERENCES products(id) ON DELETE CASCADE,
     quantity INTEGER NOT NULL,
-    UNIQUE (order_id, product_id)
+    PRIMARY KEY (order_id, product_id)
 );
